@@ -1,0 +1,404 @@
+@charset "UTF-8";
+
+footer {
+	/* position : absolute;
+	bottom : 0;
+	left : 0;
+	z-index : 10; */
+	position : relative;
+	width : 100%;
+	}
+
+footer > div {
+	position : relative;
+	width : 100%;
+	transition : all 0.25s;
+	}
+
+footer > div.swiper {
+	position : relative;
+	width : 100%;
+	overflow : hidden;
+	}
+
+footer > div.swiper > span {
+	display : block;
+	color : rgba(51, 51, 51, 1);
+	text-align : center;
+	white-space : nowrap;
+	}
+
+footer > div.swiper > div {
+	position : absolute;
+	z-index : 10;
+	width : 60px;
+	background-color : rgba(51, 51, 51, 0);
+	}
+
+footer > div.swiper > div.next-slide { right : 0; }
+footer > div.swiper > div.prev-slide { left : 0; }
+
+footer > div.swiper > button {
+	display : block;
+	position : absolute;
+	top : calc(50% - 20px);
+	z-index : 10;
+	width : 60px;
+	height : 60px;
+	margin : 0;
+	padding : 0;
+	border : 0;
+	border-radius : 0;
+	background-color : rgba(51, 51, 51, 0.75);
+	color : rgba(255, 255, 255, 1);
+	cursor : pointer;
+	transition : all 0.25s;
+	}
+
+footer > div.swiper > button:hover { background-color : rgba(215, 6, 6, 1); }
+
+footer > div.swiper > button::before {
+	text-align : center;
+	font : normal normal normal 30px/60px 'Icons', sans-serif;
+	}
+
+footer > div.swiper > button.next-slide { right : 0; }
+footer > div.swiper > button.prev-slide { left : 0; }
+footer > div.swiper > button.next-slide::before { content : '\f105'; }
+footer > div.swiper > button.prev-slide::before { content: '\f104'; }
+
+footer > div.swiper > ul {
+	display : flex;
+	width : 2000em;
+	padding : 0;
+	margin : 0;
+	list-style : none;
+	}
+
+footer > div.swiper > ul > li { position : relative; }
+
+footer > div.swiper > ul > li > span {
+	display : block;
+	position : absolute;
+	top : 20px;
+	left : 0;
+	z-index : 10;
+	height : 40px;
+	padding : 0 20px;
+	border-top-right-radius : 20px;
+	border-bottom-right-radius : 20px;
+	background-color : rgba(145, 180, 0, 1);
+	color : rgba(255, 255, 255, 1);
+	font : normal 18px/40px 'Regular', Arial, Tahoma, Verdana, sans-serif;
+	}
+
+footer > div.swiper > ul > li > span::after { content : '%'; }
+
+footer > div.swiper > ul > li > div {
+	position : absolute;
+	top : 25px;
+	right : 15px;
+	z-index : 10;
+	width : 30px;
+	height : 30px;
+	color : rgba(215, 6, 6, 1);
+	}
+
+footer > div.swiper > ul > li > div::before {
+	font : normal normal normal 30px/30px 'Icons', sans-serif;
+	content : '\f004';
+	}
+
+footer > div.swiper > ul > li > a,
+footer > div.feedback > ul > li > a { text-decoration : none; }
+
+footer > div.swiper > ul > li > a,
+footer > div.swiper > ul > li > a > div > img {
+	display : block;
+	width : 100%;
+	}
+
+footer > div.swiper > ul > li > a > div > img {
+	height : auto;
+	transform : scale(1, 1);
+	transition : all 0.25s;
+	opacity : 1;
+	}
+
+footer > div.swiper > ul > li > a > div {
+	color : rgba(0, 0, 0, 1);
+	font : normal 18px/20px 'Headers', Arial, Tahoma, Verdana, sans-serif;
+	transition : all 0.25s;
+	}
+
+footer > div.swiper > ul > li > a > div:first-child { overflow : hidden; }
+footer > div.swiper > ul > li > a > div:last-child { padding : 20px; }
+footer > div.swiper > ul > li > a:hover > div { color : rgba(215, 6, 6, 1); }
+
+footer > div.swiper > ul > li > a:hover > div > img {
+	transform : scale(1.1, 1.1);
+	opacity : 0.9;
+	}
+
+footer > div.feedback { background-color : rgba(248, 248, 248, 1); }
+
+footer > div.feedback > ul {
+	display : flex;
+	flex-wrap : wrap;
+	margin : 0;
+	padding : 0;
+	list-style : none;
+	}
+
+footer > div.feedback > ul > li {
+	position : relative;
+	min-height : 50px;
+	white-space : nowrap;
+	}
+
+footer > div.feedback > ul > li,
+footer > div.feedback > ul > li > a { color : rgba(51, 51, 51, 1); }
+
+footer > div.feedback > ul > li > span.name { position : relative; }
+
+footer > div.feedback > ul > li > span.name::before {
+	position : absolute;
+	top : -20px;
+	left : 0;
+	z-index : 10;
+	color : rgba(83, 83, 83, 1);
+	font : normal 20px/20px 'Regular', Arial, Tahoma, Verdana, sans-serif;
+	content : 'Обратная связь';
+	}
+
+footer > div.footer {
+	position : relative;
+	background-color  : rgba(51, 51, 51, 1);
+	color  : rgba(100, 100, 100, 1);
+	}
+
+footer > div.footer > ul,
+footer > div.footer > ul > li > ul {
+	width : 100%;
+	margin : 0;
+	padding : 0;
+	list-style : none;
+	}
+
+footer > div.footer > ul {
+	display : flex;
+	flex-wrap : wrap;
+	}
+
+footer > div.footer > ul > li {
+	display : flex;
+	position : relative;
+	font : normal 16px/30px 'Regular', Arial, Tahoma, Verdana, sans-serif;
+	}
+
+footer > div.footer > ul > li > ul > li > a {
+	color  : rgba(150, 150, 150, 1);
+	text-decoration : none;
+	transition : all 0.25s;
+	}
+
+footer > div.footer > ul > li > ul > li:first-child,
+footer > div.footer > ul > li > ul > li:first-child > a {
+	color : rgba(255, 255, 255, 1);
+	font : normal 18px/50px 'Regular', Arial, Tahoma, Verdana, sans-serif;
+	}
+
+footer > div.footer > ul > li > ul > li:first-child { padding : 0 0 10px 0; }
+footer > div.footer > ul > li > ul > li > a:hover { color : rgba(255, 255, 255, 1); }
+
+footer > div.footer > ul > li > div {
+	position : absolute;
+	top : 0;
+	right : 0;
+	z-index : 10;
+	width : 100%;
+	height : 50%;
+	}
+
+footer > div.footer > ul > li > div > a {
+	position : relative;
+	display : inline-block;
+	vertical-align : top;
+	width : 50px;
+	height : 50px;
+	margin : 0 0 0 5px;
+	border : solid 2px rgba(150, 150, 150, 1);
+	color : rgba(150, 150, 150, 1);
+	border-radius : 50%;
+	transition : all 0.25s;
+	}
+
+footer > div.footer > ul > li > div > a::before {
+	position : absolute;
+    top : 0;
+    right : 0;
+    z-index : 10;
+    width : 46px;
+    height : 46px;
+    font : normal normal normal 20px/46px 'Icons', sans-serif;
+    text-align : center;
+	}
+
+footer > div.footer > ul > li > div > a.facebook::before { content : '\f09a'; }
+footer > div.footer > ul > li > div > a.instagram::before { content : '\f16d'; }
+footer > div.footer > ul > li > div > a.youtube::before { content : '\f16a'; }
+
+footer > div.footer > ul > li > div > a:hover {
+	border : solid 2px rgba(255, 255, 255, 1);
+	color : rgba(255, 255, 255, 1);
+	}
+
+a.developer {
+	display : block;
+	z-index : 10;
+	width : 170px;
+	height : 50px;
+	background-image : url('../img/developer.svg?28092017');
+	background-position : 100% 50%;
+	background-repeat : no-repeat;
+	background-size : contain;
+	color : rgba(255, 255, 255, 1);
+	}
+
+a.developer::after {
+	display : block;
+	position : absolute;
+	bottom : 0;
+	left : 46px;
+	z-index : 10;
+	font : normal 12px/12px Arial, Tahoma, Verdana, sans-serif;
+	content : 'разработка сайта';
+	white-space : nowrap;
+	opacity : 0.6;
+	transition : all 0.25s;
+	}
+
+a.developer:hover::after { opacity : 1; }
+
+@media only screen and (min-width : 1161px) {
+	footer > div.feedback { padding : 60px; }
+
+	footer > div.feedback > ul > li {
+		width : 40%;
+		font : normal 30px/50px 'Headers', Arial, Tahoma, Verdana, sans-serif;
+		}
+
+	footer > div.feedback > ul > li:first-child { padding : 0 30px 0 0; }
+	footer > div.feedback > ul > li:last-child { text-align : right; }
+
+	footer > div.feedback > ul > li:first-child,
+	footer > div.feedback > ul > li:last-child { width : 30% !important; }
+	footer > div.feedback > ul > li:last-child { padding : 0 0 0 30px; }
+
+	footer > div.footer { padding : 45px 60px; }
+	footer > div.footer > ul > li {
+		width : 25%;
+		padding : 0 0 0 80px;
+		}
+
+	footer > div.footer > ul > li:first-child,
+	footer > div.footer > ul > li:last-child { padding : 0 !important; }
+
+	footer > div.footer > ul > li > div { text-align : right; }
+
+	footer > div.footer > ul > li > a.developer {
+		position : absolute;
+		bottom : 0;
+		right : 0;
+		}
+
+	footer > div.swiper { padding-bottom : 30px; }
+	footer > div.swiper > ul > li { width : 25vw; }
+	footer > div.swiper > div { top : 100px; }
+
+	footer > div.swiper > span {
+		height : 100px;
+		padding : 0 60px;
+		font : normal 30px/100px 'Headers', Arial, Tahoma, Verdana, sans-serif;
+		}
+	}
+
+@media only screen and (min-width : 561px) and (max-width : 1160px) {
+	footer > div.feedback { padding : 60px 40px 40px 40px; }
+
+	footer > div.feedback > ul > li {
+		flex-grow : 1;
+		font : normal 20px/50px 'Headers', Arial, Tahoma, Verdana, sans-serif;
+		}
+
+	footer > div.feedback > ul > li:first-child,
+	footer > div.feedback > ul > li:last-child { padding : 0 20px 0 0; }
+	footer > div.feedback > ul > li:last-child { width : 100%; }
+	footer > div.feedback > ul > li:first-child { max-width : 220px; }
+
+	footer > div.footer { padding : 30px 40px; }
+	footer > div.footer > ul > li { width : 50%; }
+
+	footer > div.footer > ul > li:nth-child(2),
+	footer > div.footer > ul > li:nth-child(3) { display : none; }
+
+	footer > div.footer > ul > li > div { text-align : right; }
+
+	footer > div.footer > ul > li > a.developer {
+		position : absolute;
+		bottom : 0;
+		right : 0;
+		}
+
+	footer > div.swiper { padding-bottom : 20px; }
+	footer > div.swiper > ul > li { width : 50vw; }
+	footer > div.swiper > div { top : 70px; }
+
+	footer > div.swiper > span {
+		height : 70px;
+		padding : 0 40px;
+		font : normal 24px/70px 'Headers', Arial, Tahoma, Verdana, sans-serif;
+		}
+	}
+
+@media only screen and (max-width : 560px) {
+	footer > div.feedback { padding : 30px 20px 10px 20px; }
+
+	footer > div.feedback > ul > li {
+		width : 100%;
+		font : normal 26px/70px 'Headers', Arial, Tahoma, Verdana, sans-serif;
+		}
+
+	footer > div.feedback > ul > li:last-child { text-align : center; }
+
+	footer > div.footer { padding : 15px 20px; }
+	footer > div.footer > ul > li { width : 100%; }
+	footer > div.footer > ul > li:first-child > ul > li { display : none; }
+	footer > div.footer > ul > li:first-child > ul > li:first-child { display : block !important; }
+
+	footer > div.footer > ul > li:nth-child(2),
+	footer > div.footer > ul > li:nth-child(3) { display : none; }
+
+	footer > div.footer > ul > li:last-child {
+		padding-top : 70px;
+		min-height : 100px !important;
+		}
+
+	footer > div.footer > ul > li:first-child > ul > li:first-child,
+	footer > div.footer > ul > li > div { text-align : center; }
+
+	footer > div.footer > ul > li > a.developer {
+		position : relative;
+		margin : 0 auto;
+		}
+
+	footer > div.swiper { padding-bottom : 10px; }
+	footer > div.swiper > ul > li { width : 100vw; }
+	footer > div.swiper > div { top : 60px; }
+
+	footer > div.swiper > span {
+		height : 60px;
+		padding : 0 20px;
+		font : normal 22px/60px 'Headers', Arial, Tahoma, Verdana, sans-serif;
+		}
+	}

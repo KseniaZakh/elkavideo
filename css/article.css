@@ -1,0 +1,62 @@
+@charset "UTF-8";
+
+article {
+	position : relative;
+	min-height : 30vh;
+	}
+
+article > div.brief { font : normal 20px/24px 'Regular', Arial, Tahoma, Verdana, sans-serif; }
+article > div.content { font : normal 18px/22px 'Regular', Arial, Tahoma, Verdana, sans-serif; }
+
+article > div > h1 {
+	position : relative;
+	padding : 20px 0;
+	text-align : center;
+	}
+
+article > div > h1::after {
+	position : absolute;
+	bottom : 0;
+	z-index : 10;
+	height : 5px;
+	background-color : rgba(215, 6, 6, 1);
+	content : '';
+	}
+
+@media only screen and (min-width : 1161px) {
+	article > div.brief,
+	article > div.content { padding : 0 60px; }
+	article > div.content { margin : 30px 0; }
+	article > div > h1 { font : normal 48px/48px 'Headers', Arial, Tahoma, Verdana, sans-serif; }
+
+	article > div > h1::after {
+		left : calc(50% - 20px);
+		width : 60px;
+		}
+	}
+
+@media only screen and (min-width : 561px) and (max-width : 1160px) {
+	article > div.brief,
+	article > div.content { padding : 0 40px; }
+	article > div.content { margin : 20px 0; }
+	article > div > h1 { font : normal 38px/38px 'Headers', Arial, Tahoma, Verdana, sans-serif; }
+
+	article > div > h1::after {
+		left : calc(50% - 20px);
+		width : 40px;
+		}
+	}
+
+@media only screen and (max-width : 560px) {
+	article { padding-top : 80px; }
+
+	article > div.brief,
+	article > div.content { padding : 0 20px; }
+	article > div.content { margin : 10px 0; }
+	article > div > h1 { font : normal 28px/28px 'Headers', Arial, Tahoma, Verdana, sans-serif; }
+
+	article > div > h1::after {
+		left : calc(50% - 20px);
+		width : 40px;
+		}
+	}

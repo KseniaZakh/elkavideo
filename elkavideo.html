@@ -1,0 +1,318 @@
+<!DOCTYPE html>
+<html lang="ru">
+	<head>
+    	<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    	<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0, minimum-scale=1.0" />
+    	<meta property="og:url" content="http://elkindom.tarantul.zone/" />
+		<meta property="og:type" content="website" />
+		<meta property="og:title" content="Ёлкин Дом" />
+		<meta property="og:image" content="http://elkindom.tarantul.zone/resources/img/social.jpg" />
+
+    	<!-- meta name="author" content="tarantul web development zone | www.tarantul.zone" / -->
+    	<link rel="stylesheet" href="css/default.css?1511721558" />
+    	<link rel="stylesheet" href="css/fonts.css?1507480748" />
+		<link rel="stylesheet" href="css/style.css?1509402001" />
+		<link rel="stylesheet" href="css/animate.css?1507480747" />
+		<link rel="stylesheet" href="css/form.css?1508367390" />
+		<link rel="stylesheet" href="css/header.css?1510497164" />
+		<link rel="stylesheet" href="css/nav.css?1510497100" />
+		<link rel="stylesheet" href="css/breadcrumbs.css?1510219952" />
+		<link rel="stylesheet" href="css/article.css?1507480747" />
+		<link rel="stylesheet" href="css/main.css?1708192303" />
+		<link rel="stylesheet" href="css/footer.css?1511721580" />
+		<script defer src="js/jquery.js?1507480956"></script>
+		<script defer src="js/base.js?1510247444"></script>
+		<script defer src="js/inputmask.js?1507480953"></script>
+		<!-- <script defer src="https://api-maps.yandex.ru/2.1/?lang=ru_RU"></script> -->
+		<script defer src="js/form.js?1510496931"></script>
+		<script defer src="js/nav.js?1507480956"></script>
+		<script defer src="js/swiper.js?1509309677"></script>
+		<script defer src="js/video.js?1708192303"></script>
+		<title>Ёлкин Дом</title>
+	</head>
+	<body onresize="resize();" onload="resize();">
+		<div class="container">
+			<a href="/favourites/" title="Избранное">
+				<span>0</span>
+			</a>
+			<div class="loading">
+				<span></span>
+			</div>
+			<div class="choose hide">
+				<ul class="animated callback">
+        			<li data-choose="callback" data-item="1">не имеет значения</li>
+            		<li data-choose="callback" data-item="2">10:00 - 13:00</li>
+            		<li data-choose="callback" data-item="3">13:00 - 16:00</li>
+           			<li data-choose="callback" data-item="4">16:00 - 19:00</li>
+            	</ul>
+				<ul class="animated feedback">
+        			<li data-choose="feedback" data-item="1">Нужен прайс-лист</li>
+        			<li data-choose="feedback" data-item="2">Сотрудничество</li>
+            		<li data-choose="feedback" data-item="3">Хочу у вас работать</li>
+            		<li data-choose="feedback" data-item="4">Другое</li>
+            	</ul>
+            </div>
+			<div class="form">
+				<form class="animated" method="post" name="application" action="/resources/actions/?action=order" target="actions">
+					<input class="clear" type="hidden" name="order_name" value="" />
+					<input class="clear" type="hidden" name="order_type" value="" />
+					<input class="clear" type="hidden" name="order_item" value="" />
+					<input type="hidden" name="user_country" value="Не удалось установить местоположение" />
+					<input type="hidden" name="user_region" value="Не удалось установить местоположение" />
+					<input type="hidden" name="user_city" value="Не удалось установить местоположение" />
+					<button type="button"></button>
+					<span class="header"></span>
+					<div>
+						<span class="success"></span>
+						<span class="presentation">Для Вашего удобства, Вы можете скачать и распечатать презентацию проекта.
+						В целях защиты от SPAM-роботов, пожалуйста, заполните поля ниже.</span>
+						<div class="field input require callback feedback presentation order">
+							<input class="clear require" type="text" name="user_name" value="" />
+							<span>Имя</span>
+						</div>
+						<div class="field input require callback presentation order">
+							<input class="clear require phone" type="text" name="user_phone" value="" />
+							<span>Телефон</span>
+						</div>
+						<div class="field input require feedback">
+							<input class="clear require" type="text" name="user_email" value="" />
+							<span>E-mail</span>
+						</div>
+						<div class="field input choose callback">
+							<input class="clear choose" type="text" name="user_callback" value="" data-list="callback" readonly />
+							<span>Удобное время</span>
+						</div>
+							<div class="field input choose feedback">
+								<input class="clear choose" type="text" name="user_feedback" value="" data-list="feedback" readonly />
+								<span>Выберите категорию</span>
+							</div>
+						<div class="field textarea callback feedback order">
+							<textarea class="clear" name="user_message"></textarea>
+							<span>Комментарий</span>
+						</div>
+						<p>Нажимая на кнопку «<span></span>», Вы соглашаетесь с <a href="#" title="политика конфиденциальности">политикой конфиденциальности</a></p>
+					</div>
+					<span class="button submit">
+						<button type="button"></button>
+					</span>
+				</form>
+			</div>
+			<header>
+				<div>
+					<a class="phone" href="tel:+74995000658" title="+7 (499) 500-06-58">+7 (499) 500-06-58</a>
+					<a class="logo" href="/" title="Ёлкин Дом"></a>
+					<ul class="closed">
+						<li></li>
+						<li></li>
+						<li></li>
+						<li></li>
+					</ul>
+					<button class="open-form" type="button" data-form="callback" data-name="Мы Вам перезвоним!" data-submit="Заказать звонок"></button>
+				</div>
+			</header>
+
+<nav>
+<div>
+<ul>
+<li>
+<a href="/catalog/" title="Каталог">Каталог</a>
+</li>
+<li>
+<a href="/video/" title="Видео">Видео</a>
+</li>
+<li>
+<a href="/about/" title="О компании">О компании</a>
+</li>
+<li>
+<a href="/contacts/" title="Контакты">Контакты</a>
+</li>
+</ul>
+</div>
+</nav>
+
+<!-- Видео вместо слайдера -->
+<section class="swiper">
+	<ul class="swiper-wrapper">
+		<li class="swiper-slide">
+			<span></span>
+			<video muted="muted" loop="loop" playsinline >
+				<source src="video/stavropol.mp4" type="video/mp4" />
+
+			</video>
+			<div>
+				<h5>Новогоднее освещение</h5>
+				<a href="/catalog/project.1/" title="Узнайте больше"></a>
+			</div>
+		</li>
+	</ul>
+	<div class="pagination"></div>
+</section>
+<!-- Конец видео вместо слайдера -->
+
+<section class="news">
+<ul>
+<li>
+<div>
+<img src="/upload/36/news.0500766235.jpg" alt="Новые возможности, новые тенденции" />
+</div>
+<div>
+<h4>Новые возможности, новые тенденции</h4>
+<span>1 апреля 2017</span>
+<div><p>Стоит отметить, что при реализации <a href="#" title="новогодних дизайн-проектов">новогодних дизайн-проектов</a>, нашими специалистами используются только качественные, прошедшие проверку, материалы и комплектующие.
+</p></div>
+<a href="/news/01.04.2017/" title="Читать дальше"></a>
+</div>
+</li>
+<li>
+<div>
+<img src="/upload/35/news.5f2135d661.jpg" alt="Мы имеем большой опыт в области светового оформления парков, скверов, улиц, площадей, фасадов зданий, деревьев." />
+</div>
+<div>
+<h4>Мы имеем большой опыт в области светового оформления парков, скверов, улиц, площадей, фасадов зданий, деревьев.</h4>
+<span>1 марта 2017</span>
+<a href="/news/01.03.2017/" title="Читать дальше"></a>
+</div>
+</li>
+<li>
+<div>
+<img src="/upload/34/news.375487fcbe.jpg" alt="«Ёлкин Дом» - крупнейший российский производитель искусственных елей больших размеров" />
+</div>
+<div>
+<h4>«Ёлкин Дом» - крупнейший российский производитель искусственных елей больших размеров</h4>
+<span>1 февраля 2017</span>
+<a href="/news/01.02.2017/" title="Читать дальше"></a>
+</div>
+</li>
+<li>
+<div>
+<img src="/upload/33/news.f9e2735cfe.jpg" alt="Осуществляем комплекс услуг «под ключ»." />
+</div>
+<div>
+<h4>Осуществляем комплекс услуг «под ключ».</h4>
+<span>1 января 2017</span>
+<a href="/news/01.01.2017/" title="Читать дальше"></a>
+</div>
+</li>
+</ul>
+</section>
+			<footer>
+<div class="swiper">
+<span>Рекомендуемые проекты</span>
+<button class="next-slide" type="button"></button>
+<button class="prev-slide" type="button"></button>
+<ul class="swiper-wrapper">
+<li class="swiper-slide">
+<a href="/catalog/project.36/" title="СТАВРОПОЛЬ ФОНТАН &amp; КАСКАДЫ">
+<div>
+<img src="/upload/107/thumb.442ef6f6a4.jpg" alt="СТАВРОПОЛЬ ФОНТАН &amp; КАСКАДЫ" />
+</div>
+<div>СТАВРОПОЛЬ ФОНТАН &amp; КАСКАДЫ</div>
+</a>
+</li>
+<li class="swiper-slide">
+<a href="/catalog/project.12/" title="Дизайн-проект «ЛОШАДЬ»">
+<div>
+<img src="/upload/47/thumb.3e822f1266.jpg" alt="Дизайн-проект «ЛОШАДЬ»" />
+</div>
+<div>Дизайн-проект «ЛОШАДЬ»</div>
+</a>
+</li>
+<li class="swiper-slide">
+<a href="/catalog/project.51/" title="ЁЛКА СВЕТОВАЯ «ЛУКОЙЛ»">
+<div>
+<img src="/upload/124/thumb.9be91a7704.jpg" alt="ЁЛКА СВЕТОВАЯ «ЛУКОЙЛ»" />
+</div>
+<div>ЁЛКА СВЕТОВАЯ «ЛУКОЙЛ»</div>
+</a>
+</li>
+<li class="swiper-slide">
+<a href="/catalog/project.2/" title="Дизайн-проект «ЛАКОМСТВО»">
+<div>
+<img src="/upload/37/thumb.902833b852.jpg" alt="Дизайн-проект «ЛАКОМСТВО»" />
+</div>
+<div>Дизайн-проект «ЛАКОМСТВО»</div>
+</a>
+</li>
+<li class="swiper-slide">
+<a href="/catalog/project.46/" title="ЁЛКА СВЕТОВАЯ «КАЛЕЙДОСКОП»">
+<div>
+<img src="/upload/119/thumb.46a4112b4f.jpg" alt="ЁЛКА СВЕТОВАЯ «КАЛЕЙДОСКОП»" />
+</div>
+<div>ЁЛКА СВЕТОВАЯ «КАЛЕЙДОСКОП»</div>
+</a>
+</li>
+<li class="swiper-slide">
+<a href="/catalog/project.9/" title="Дизайн-проект «КАМЕЯ»">
+<div>
+<img src="/upload/44/thumb.bbad093dfa.jpg" alt="Дизайн-проект «КАМЕЯ»" />
+</div>
+<div>Дизайн-проект «КАМЕЯ»</div>
+</a>
+</li>
+</ul>
+</div>				<div class="feedback">
+					<ul>
+						<li>
+							<span class="name">Свяжитесь с нами</span>
+						</li>
+						<li>
+							<div class="field input choose feedback">
+								<input class="clear choose" type="text" name="user_feedback" value="" data-list="feedback" readonly />
+								<span>Выберите категорию</span>
+							</div>
+							<span class="button feedback">
+								<button type="button" data-form="feedback" data-name="Свяжитесь с нами!" data-submit="Отправить"></button>
+							</span>
+						</li>
+						<li>
+							<a href="tel:+74995000658" title="+7 (499) 500-06-58">+7 (499) 500-06-58</a>
+						</li>
+					</ul>
+				</div>
+				<div class="footer">
+					<ul>
+						<li>
+							<ul>
+								<li>&copy; 2019 <a href="/" title="Ёлкин Дом">Ёлкин Дом</a></li>
+								<li>
+								141551, Московская область,<br />
+								Солнечногорский район,<br />
+								деревня Баранцево, 1Б
+								</li>
+								<li><a href="mailto:elkindom@elkindom.ru" title="">elkindom@elkindom.ru</a></li>
+							</ul>
+						</li>
+						<li>
+							<ul>
+								<li><a href="/about/" title="О компании">О компании</a></li>
+								<li><a href="/news/" title="Новости и события">Новости и события</a></li>
+								<li><a href="#" title="Наши партнёры">Наши партнёры</a></li>
+								<li><a href="/contacts/" title="Контакты">Контакты</a></li>
+							</ul>
+						</li>
+						<li>
+							<ul>
+								<li><a href="/catalog/" title="Каталог проектов">Каталог проектов</a></li>
+								<li><a href="#" title="Ёлки зелёные">Ёлки зелёные</a></li>
+								<li><a href="#" title="Палки деревянные">Палки деревянные</a></li>
+								<li><a href="#" title="Окна пластиковые">Окна пластиковые</a></li>
+								<li><a href="#" title="Мозги плавятся">Мозги плавятся</a></li>
+								<li><a href="#" title="Утки летят на юг">Утки летят на юг</a></li>
+							</ul>
+						</li>
+						<li>
+							<div>
+								<a class="facebook" href="https://www.facebook.com/elkindom.ru/" title="Мы на facebook" target="_blank"></a>
+								<a class="instagram" href="https://www.instagram.com/elkin.dom/" title="Мы в instagram" target="_blank"></a>
+								<a class="youtube" href="https://www.youtube.com/channel/UCNxwNLz_6Yr08Sr57GRqVvA" title="Мы на YouTube" target="_blank"></a>
+							</div>
+							<a class="developer" href="http://www.tarantul.zone/" title="разработка сайта" target="_blank"></a>
+						</li>
+					</ul>
+				</div>
+			</footer>
+		</div>
+		<iframe id="actions" name="actions"></iframe>
+	</body>
+</html>

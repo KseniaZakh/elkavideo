@@ -1,0 +1,307 @@
+@charset "UTF-8";
+
+div.container > div.form {
+	display : none;
+	position : absolute;
+	top : 0;
+	left : 0;
+	z-index : 110;
+	width : 100%;
+	height : 100%;
+	background-color : rgba(0, 0, 0, 0.6);
+	}
+
+div.container > div.form.show { display : block !important; }
+
+div.container > div.form.show > form {
+	animation-name : slideDown;
+	animation-duration : 0.25s;
+	animation-iteration-count : 1;
+	}
+
+div.container > div.form.shake > form {
+    animation-name : shake;
+    animation-duration : 0.25s;
+    animation-iteration-count : 1;
+	}
+
+div.container > div.form > form {
+	position : absolute;
+	z-index : 10;
+	width : 90%;
+	max-width : 480px;
+	background-color : rgba(255, 255, 255, 1);
+	color : rgba(51, 51, 51, 1);
+	}
+
+div.container > div.form > form > button {
+	position : absolute;
+	top : 20px;
+	right : 20px;
+	z-index : 10;
+	width : 30px;
+	height : 30px;
+	margin : 0;
+	padding : 0;
+	border : 0;
+	background-color : rgba(255, 255, 255, 1);
+	cursor : pointer;
+	transform : scale(1, 1);
+	transition : all 0.25s;
+	}
+
+div.container > div.form > form > button::before,
+div.container > div.form > form > button::after {
+	display : block;
+	position : absolute;
+	top : 13px;
+	left : 0;
+	z-index : 10;
+	width : 100%;
+	height : 4px;
+	border-radius : 2px;
+	background-color : rgba(51, 51, 51, 1);
+	content : '';
+	}
+
+div.container > div.form > form > button:hover { transform : scale(0.8, 0.8); }
+div.container > div.form > form > button::before { transform : rotate(45deg); }
+div.container > div.form > form > button::after { transform : rotate(-45deg); }
+
+div.container > div.form > form > span.header {
+	display : block;
+	width : 100%;
+	height : 50px;
+	margin : 50px 0 0 0;
+	padding : 0 20px;
+	font : normal 25px/50px 'Bold', Arial, Tahoma, Verdana, sans-serif;
+	text-align : center;
+	}
+
+div.container > div.form > form > div {
+	background-color : rgba(51, 51, 51, 0.05);
+	color : rgba(51, 51, 51, 1);
+	padding : 20px 30px;
+	}
+
+div.container > div.form > form > div > div.field {
+	display : none;
+	background-color : rgba(255, 255, 255, 1);
+	border-radius : 25px;
+	}
+
+span.button,
+span.button > button { display : block; }
+span.button { margin : 20px 0; }
+
+span.button > button {
+	display : block;
+	height : 50px;
+	padding : 0 25px;
+	margin : 0 auto;
+	border : 0;
+	border-radius : 25px;
+	font : normal 18px/18px 'Bold', Arial, Tahoma, Verdana, sans-serif;
+	background-color : rgba(51, 51, 51, 0.25);
+	color : rgba(255, 255, 255, 1);
+	transition : all 0.25s;
+	}
+
+span.button.active > button {
+	background-color : rgba(215, 6, 6, 1);
+	cursor : pointer;
+	}
+
+span.button.active > button:hover { background-color : rgba(215, 6, 6, 0.8); }
+
+div.input,
+div.textarea {
+	position : relative;
+	margin : 10px 0;
+	border-radius : 25px;
+	background-color : rgba(255, 255, 255, 1);
+	}
+
+div.input { height : 50px; }
+div.textarea { height : 125px; }
+div.input > input[type=text].error { border : 2px solid rgba(215, 6, 6, 1); }
+div.input > input[type=text].success { border : 2px solid rgba(145, 180, 0, 1); }
+
+div.input > input[type=text],
+div.textarea > textarea {
+	display : block;
+	position : relative;
+	z-index : 11;
+	width : 100%;
+	height : inherit;
+	border : 2px solid rgba(227, 227, 227, 1);
+	border-radius : 25px;
+	background-color : rgba(255, 255, 255, 0);
+	color : rgba(51, 51, 51, 1);
+	}
+
+div.input > input[type=text] {
+	padding : 0 40px 0 25px;
+	font : normal 18px/48px 'Regular', Arial, Tahoma, Verdana, sans-serif;
+	}
+
+div.textarea > textarea {
+	padding : 10px 25px;
+	font : normal 18px/22px 'Regular', Arial, Tahoma, Verdana, sans-serif;
+	resize : none;
+	overflow : hidden;
+	}
+
+div.input > span,
+div.textarea > span {
+	display : block;
+	position : absolute;
+	top : 5px;
+	left : 25px;
+	z-index : 10;
+	max-width : 65%;
+	color : rgba(165, 165, 165, 1);
+	white-space : nowrap;
+	font : normal 18px/40px 'Regular', Arial, Tahoma, Verdana, sans-serif;
+	transform : scale(1, 1);
+	transition : all 0.25s;
+	overflow : hidden;
+	}
+
+div.field.input > input[type=text]:focus + span,
+div.field.textarea > textarea:focus + span,
+div.field > span.selected { transform : scale(0, 0); }
+div.input.choose > input[type=text] { cursor : pointer; }
+
+div.input.choose::after,
+div.input.require::after {
+	position : absolute;
+    top : 0;
+    right : 0;
+    z-index : 10;
+    width : 50px;
+    height : 50px;
+    text-align : center;
+    }
+
+div.input.choose::after {
+	color : rgba(51, 51, 51, 1);
+	font : normal normal normal 20px/50px 'Icons', sans-serif;
+    content : '\f142';
+    }
+
+div.input.require::after {
+	color : rgba(215, 6, 6, 1);
+	font : normal 20px/50px Arial, Tahoma, Verdana, sans-serif;
+    content : '\273b';
+    }
+
+div.container > div.form > form > div > p,
+div.container > div.form > form > div > span {
+	margin : 0;
+	font : normal 16px/20px 'Regular', Arial, Tahoma, Verdana, sans-serif;
+	}
+
+div.container > div.form > form > div > p { padding : 10px; }
+
+div.container > div.form > form > div > span {
+	display : none;
+	padding : 10px;
+	}
+
+div.container > div.form > form > div > p > a {
+	color : rgba(145, 180, 0, 1);
+	text-decoration : underline;
+	}
+
+div.container > div.form > form > div > p > a:hover { text-decoration : none; }
+
+div.container > div.choose {
+	display : none;
+	position : absolute;
+	top : 0;
+	left : 0;
+	z-index : 120;
+	width : 100%;
+	height : 100%;
+	background-color : rgba(0, 0, 0, 0.1);
+	}
+
+div.container > div.choose.show { display : block; }
+div.container > div.choose.hide { display : none; }
+
+div.container > div.choose.show > ul {
+	animation-name : slideUp;
+	animation-duration : 0.25s;
+	animation-iteration-count : 1;
+	}
+
+div.container > div.choose > ul {
+	display : none;
+	position : absolute;
+	z-index : 10;
+	padding : 0;
+	margin : 0;
+	border : solid 2px rgba(200, 200, 200, 1);
+	list-style : none;
+	background-color : rgba(255, 255, 255, 1);
+	color : rgba(51, 51, 51, 1);
+	}
+
+div.container > div.choose > ul > li {
+	display : block;
+	position : relative;
+	width : 270px;
+	height : 50px;
+	padding : 0 30px;
+	font: normal 18px/50px 'Regular', Arial, Tahoma, Verdana, sans-serif;
+	white-space : nowrap;
+	transition : all 0.25s;
+	}
+
+div.container > div.choose > ul > li:before {
+  	position: absolute;
+  	bottom : -1px;
+    left : 20px;
+  	z-index : 10;
+	width : 230px;
+	height : 1px;
+  	background-color : rgba(200, 200, 200, 1);
+  	color : inherit;
+  	content : '';
+	}
+
+div.container > div.choose > ul > li:last-child::before,
+div.container > div.choose > ul > li:hover::before { background-color : rgba(255, 255, 255, 0) !important; }
+
+div.container > div.choose > ul > li:hover {
+	background-color : rgba(200, 200, 200, 1);
+	color : rgba(255, 255, 255, 1);
+	cursor : pointer;
+	}
+
+footer > div > ul > li > div.field.input.choose.feedback {
+	margin : 0 !important;
+	width : calc(100% - 70px);
+	}
+
+footer > div > ul > li > span.button {
+	position : absolute;
+	right : 0;
+	top : 0;
+	z-index : 10;
+	margin : 0 !important;
+	color : rgba(255, 255, 255, 1);
+	}
+
+footer > div > ul > li > span.button > button::before {
+	position : absolute;
+    top : 0;
+    right : 0;
+    z-index : 20;
+    width : 50px;
+    height : 50px;
+    font : normal normal normal 20px/50px 'Icons', sans-serif;
+    text-align : center;
+	content : '\f003';
+	}
