@@ -10,9 +10,25 @@ div.container > section.swiper {
 	overflow : hidden;
 	}
 
+	/* added */
+@media (orientation: landscape) {
+	div.container > section.swiper  {
+		width : 100vw;
+		min-height : 100%;
+	}
+}
+
+@media (orientation: portrait) {
+	div.container > section.swiper  {
+		min-width : 100%;
+		height : 100vh;
+	}
+}
+/* end of added */
+
 div.container > section.swiper > ul {
 	display : flex;
-	width : 2000em;
+	/* width : 2000em; */
 	height : 100%;
 	padding : 0;
 	margin : 0;
@@ -23,12 +39,12 @@ div.container > section.swiper > ul > li {
 	position : relative;
 	width : 100vw;
 	height : 100%;
-	background-position : 100% 50%;
-	background-repeat : no-repeat;
-	background-size : cover;
 	/* added */
-	background-color: rgba(11, 11, 97, 1);
-	background-image: url("http://elkindom.tarantul.zone/upload/1/main.575f54a7fc1fdf2cb6ae1cb9fa98b6b2.jpg");
+	/* background-position : 100% 50%;
+	background-repeat : no-repeat;
+	background-size : cover; */
+	/* background-color: rgba(11, 11, 97, 1); */
+	/* background-image: url("http://elkindom.tarantul.zone/upload/1/main.575f54a7fc1fdf2cb6ae1cb9fa98b6b2.jpg"); */
 	display: flex;
 	}
 
