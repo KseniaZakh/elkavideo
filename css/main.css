@@ -39,12 +39,9 @@ div.container > section.swiper > ul > li {
 	position : relative;
 	width : 100vw;
 	height : 100%;
-	/* added */
 	background-position : 100% 50%;
 	background-repeat : no-repeat;
 	background-size : cover;
-	/* background-color: rgba(11, 11, 97, 1); */
-	background-image: url("http://elkindom.tarantul.zone/upload/1/main.575f54a7fc1fdf2cb6ae1cb9fa98b6b2.jpg");
 	display: flex;
 	}
 
