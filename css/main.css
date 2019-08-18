@@ -4,7 +4,9 @@ div.container > section.swiper {
 	position : relative;
 	width : 100vw;
 	height : 100vh;
-	min-height : 480px;
+	/* added */
+	/* min-height : 480px; */
+	/* end of added */
 	overflow : hidden;
 	}
 
@@ -26,6 +28,7 @@ div.container > section.swiper > ul > li {
 	background-size : cover;
 	/* added */
 	background-color: rgba(11, 11, 97, 1);
+	background-image: url("http://elkindom.tarantul.zone/upload/1/main.575f54a7fc1fdf2cb6ae1cb9fa98b6b2.jpg");
 	display: flex;
 	}
 
