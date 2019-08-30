@@ -44,8 +44,8 @@ function resize() {
 
 		// added
 		if (window.matchMedia("(min-width: 1161px)").matches) {
-			$("div.container > nav > div").css({"width" : $("header > div").outerWidth() - $("header > div > a.phone").width() -
-			$("header > div > button.open-form").width() + $(window).scrollLeft() - 160 + "px"});
+			$("div.container > nav > div").css({"width" : $("header > div").outerWidth() - $("header > div > a.phone").outerWidth() -
+			$("header > div > button.open-form").outerWidth() + $(window).scrollLeft() - 160 + "px"});
 			}
 			else {
 				$("div.container > nav > div").css({"width" : 270 + "px"});
