@@ -249,7 +249,7 @@ nav > div > div.search > form > button::before {
 
 			nav > div > div > form > button::before {
 				height: 40px;
-				top: -8px;
+				top: -10px;
 				font-size: 40px;
 			}
 		/* end of added */
