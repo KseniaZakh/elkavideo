@@ -9,5 +9,14 @@ $(document).ready(function() {
 			$("div.container > nav").addClass("opened");
 			}
 		});
+
+// added
+		if (window.matchMedia("(min-width: 1161px)").matches) {
+			$("nav > div > div").on("click", function() {
+				$(this).addClass("search");
+			});
+
+	// end of added
+		}
 	return false;
 	});

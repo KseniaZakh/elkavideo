@@ -4,32 +4,18 @@ div.container > section.swiper {
 	position : relative;
 	width : 100vw;
 	height : 100vh;
-	/* added */
 	min-height : 320px;
-	/* end of added */
+	min-width: 320px;
 	overflow : hidden;
 	}
 
-	/* added */
-@media (orientation: landscape) {
-
-	div.container > section.swiper > ul > li > video {
-		width: 100%;
-		}
-
-}
-
-@media (orientation: portrait) {
-
-	div.container > section.swiper > ul > li > video {
-		height: 100%;
-		}
-}
-/* end of added */
 
 div.container > section.swiper > ul {
 	display : flex;
-	/* width : 2000em; */
+	display : -webkit-box;
+	display : -webkit-flex;
+	display : -ms-flexbox;
+	width : 2000em;
 	height : 100%;
 	padding : 0;
 	margin : 0;
@@ -38,6 +24,16 @@ div.container > section.swiper > ul {
 
 div.container > section.swiper > ul > li {
 	position : relative;
+	display : flex;
+	display : -webkit-box;
+	display : -webkit-flex;
+	display : -ms-flexbox;
+	flex-wrap : wrap;
+	-webkit-flex-wrap : wrap;
+	-ms-flex-wrap : wrap;
+	align-items : center;
+	-webkit-align-items : center;
+	-ms-align-items : center;
 	width : 100vw;
 	height : 100%;
 	background-position : 100% 50%;
@@ -46,16 +42,28 @@ div.container > section.swiper > ul > li {
 	display: flex;
 	}
 
+	div.container > section.swiper > ul > li > div {
+	position : relative;
+	z-index : 10;
+	}
+
 	div.container > section.swiper > ul > li > video {
 		position: absolute;
 		top: 50%;
 		left: 50%;
-		min-width: 100%;
-		min-height: 100%;
 		transform: translate(-50%, -50%);
 		z-index: 1;
 	}
-		/* end of added */
+
+	div.container > section.swiper > ul > li > video.landscape {	/* добавляем */
+  	width: 100vw;
+ 	height: auto;
+	}
+
+div.container > section.swiper > ul > li > video.portrait {		/* добавляем */
+  	width: auto;
+ 	height: 100vh;
+	}
 
 div.container > section.swiper > ul > li > div > h5 {
 	display : block;
@@ -191,13 +199,10 @@ div.container > section.news > ul > li > div > a::before { content : 'Читат
 
 @media only screen and (min-width : 1161px) {
 	div.container > section.swiper > ul > li > div {
-		position : absolute;
-			/* added */
-		top: calc(50% - 145px);
-		/* top : 100px; */
-			/* end of added */
-			left : 60px;
-		z-index : 10;
+		/* position : absolute;
+		top: calc(50% - 145px); */
+		left : 60px;
+		/* z-index : 10; */
 		width : 40%;
 		max-width : 580px;
 		}
@@ -260,13 +265,10 @@ div.container > section.news > ul > li > div > a::before { content : 'Читат
 
 @media only screen and (min-width : 561px) and (max-width : 1160px) {
 	div.container > section.swiper > ul > li > div {
-		position : absolute;
-			/* added */
-		top: calc(50% - 135px);
-		/* top : 100px; */
-			/* end of added */
+		/* position : absolute;
+		top: calc(50% - 135px); */
 		left : 40px;
-		z-index : 10;
+		/* z-index : 10; */
 		width : 40%;
 		min-width : 480px;
 		}
@@ -303,12 +305,9 @@ div.container > section.news > ul > li > div > a::before { content : 'Читат
 
 @media only screen and (max-width : 560px) {
 	div.container > section.swiper > ul > li > div {
-		position : relative;
-			/* added */
+		/* position : relative;
 		top: calc(50% - 110px);
-		/* top : 100px; */
-			/* end of added */
-		z-index : 10;
+		z-index : 10; */
 		max-width : 280px;
 		margin : 0 auto;
 		}

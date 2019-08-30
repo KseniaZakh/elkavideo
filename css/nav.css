@@ -10,7 +10,7 @@ nav > div > ul {
 	margin : 0;
 	list-style : none;
 	display : flex;
-	flex-wrap : wrap;
+	/* flex-wrap : wrap; */ /* changed  */
 	}
 
 nav > div > ul > li > a {
@@ -36,15 +36,73 @@ nav > div > ul > li > a::before {
 nav > div > ul > li.selected > a,
 nav > div > ul > li > a:hover { color : rgba(255, 255, 255, 1); }
 
+/* added */
+nav > div > div {
+	position: absolute;
+	right: 0;
+	cursor: pointer;
+}
+
+nav > div > div > form,
+nav > div > div.search > form {
+	position: relative;
+	width: 100%;
+	padding-left: 20px;
+	z-index: 56;
+}
+
+nav > div > div > form > input,
+nav > div > div.search > form > input {
+	width: 100%;
+	height: 100%;
+	padding-left: 20px;
+	border: 1px solid rgba(238, 238, 238, 1);
+	font: normal 18px/40px 'Regular', Arial, Tahoma, Verdana, sans-serif;
+}
+
+nav > div > div > form > button,
+nav > div > div.search > form > button {
+	position: absolute;
+	top: 0;
+	width: 40px;
+	height: 100%;
+	border: none;
+	background-color: rgba(255, 255, 255, 1);
+	border-top: 1px solid rgba(238, 238, 238, 1);
+	border-right: 1px solid rgba(238, 238, 238, 1);
+	border-bottom: 1px solid rgba(238, 238, 238, 1);
+	cursor: pointer;
+}
+
+nav > div > div > form > button::before,
+nav > div > div.search > form > button::before {
+	position: absolute;
+	content: "\2315";
+	color: rgba(0, 0, 0, 1);
+	width: 40px;
+	right: 0;
+}
+
+
+/* end of added */
+
 @media only screen and (min-width : 1161px) {
+
 	nav {
 		height : 100px;
 		left : 160px;
 		top : 0;
 		}
 
+	/* added */
+	nav > div {
+		position: relative;
+		min-width: 270px;
+	}
+	/* end of added */
+
 	nav > div > ul { padding : 0 20px; }
-	nav > div > ul > li { margin : 0 20px; }
+	nav > div > ul > li { margin : 0 10px; } /* changed */
 
 	nav > div > ul > li > a {
 		padding : 0 10px;
@@ -57,6 +115,70 @@ nav > div > ul > li > a:hover { color : rgba(255, 255, 255, 1); }
 		}
 
 	nav > div > ul > li > a:hover::before { height : 5px; }
+
+	/* added */
+	nav > div > div {
+		width: 30px;
+		height: 30px;
+	}
+
+	nav > div > div::before {
+		position: absolute;
+		content: "\2315";
+		color: rgba(255, 255, 255, 1);
+		width: 100%;
+		height: 100%;
+		top: -5px;
+		right: 0;
+		font-size: 45px;
+	}
+
+	nav > div > div > form {
+		display: none;
+	}
+
+	nav > div > div.search {
+		width: 100%;
+	}
+
+	nav > div > div.search::before {
+		display: none;
+	}
+
+	nav > div > div.search > form {
+		display: block;
+		height: 50px;
+		z-index: 56;
+	}
+
+	nav > div > div.search > form > input {
+		border-radius: 25px;
+	}
+
+	nav > div > div.search > form > input::-webkit-input-placeholder {
+		font: normal 20px/50px 'Regular', Arial, Tahoma, Verdana, sans-serif;
+		}
+
+	nav > div > div.search > form > input::-moz-placeholder {
+		font: normal 20px/50px 'Regular', Arial, Tahoma, Verdana, sans-serif;
+	}
+
+	nav > div > div.search > form > input::-ms-input-placeholder {
+		font: normal 20px/50px 'Regular', Arial, Tahoma, Verdana, sans-serif;
+	}
+
+	nav > div > div.search > form > button {
+		right: 0;
+		border-top-right-radius: 25px;
+		border-bottom-right-radius: 25px;
+		}
+
+		nav > div > div.search > form > button::before {
+			height: 50px;
+			top: -10px;
+			font-size: 50px;
+		}
+	/* end of added */
 	}
 
 @media only screen and (max-width : 1160px) {
@@ -64,7 +186,6 @@ nav > div > ul > li > a:hover { color : rgba(255, 255, 255, 1); }
 
 	nav.opened {
 		width : 100%;
-		/* background-color : rgba(15, 15, 15, 0.4); */
 		background-color : rgba(15, 15, 15, 0);
 		}
 
@@ -73,15 +194,16 @@ nav > div > ul > li > a:hover { color : rgba(255, 255, 255, 1); }
 		top : 0;
 		left : -270px;
 		z-index : 10;
-		width : 270px;
 		height : 100%;
-		/* background-color : rgba(63, 63, 63, 1); */
 		background-color : rgba(15, 15, 15, 0.9);
 		transition : all 0.25s;
 		}
 
 	nav.opened > div { left : 0; }
-	nav > div > ul { padding : 20px 0; }
+	nav > div > ul {
+		padding : 20px 0;
+		flex-wrap : wrap; /* added  */
+	}
 	nav > div > ul > li { width : 100%; }
 	nav > div > ul > li > a { font : normal 18px/40px 'Regular', Arial, Tahoma, Verdana, sans-serif; }
 	nav > div > ul > li > a:hover::before { width : 5px; }
@@ -90,6 +212,48 @@ nav > div > ul > li > a:hover { color : rgba(255, 255, 255, 1); }
 		width : 0;
 		height : 100%;
 		}
+
+		/* added  */
+
+		nav > div > div {
+			width: 100%;
+		}
+
+		nav > div > div > form {
+			display: block;
+			height: 40px;
+			padding-right: 20px;
+		}
+
+		nav > div > div > form > input {
+			border-radius: 20px;
+			}
+
+		nav > div > div > form > input::-webkit-input-placeholder {
+			font: normal 18px/40px 'Regular', Arial, Tahoma, Verdana, sans-serif;
+			}
+
+		nav > div > div > form > input::-moz-placeholder {
+			font: normal 18px/40px 'Regular', Arial, Tahoma, Verdana, sans-serif;
+		}
+
+		nav > div > div > form > input::-ms-input-placeholder {
+			font: normal 18px/40px 'Regular', Arial, Tahoma, Verdana, sans-serif;
+		}
+
+		nav > div > div > form > button {
+			right: 20px;
+			border-top-right-radius: 20px;
+			border-bottom-right-radius: 20px;
+			}
+
+			nav > div > div > form > button::before {
+				height: 40px;
+				top: -8px;
+				font-size: 40px;
+			}
+		/* end of added */
+
 	}
 
 @media only screen and (min-width : 561px) and (max-width : 1160px) {
