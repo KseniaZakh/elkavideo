@@ -43,17 +43,28 @@ function resize() {
 		}
 
 		// added
-		if (window.matchMedia("(min-width: 1161px)").matches) {
-			$("div.container > nav > div").css({"width" : $("header > div").outerWidth() - $("header > div > a.phone").outerWidth() -
-			$("header > div > button.open-form").outerWidth() + $(window).scrollLeft() - 160 + "px"});
+
+		var scrollWidth = Math.max(
+			  document.body.scrollWidth, document.documentElement.scrollWidth,
+			  document.body.offsetWidth, document.documentElement.offsetWidth,
+			  document.body.clientWidth, document.documentElement.clientWidth
+		  );
+
+
+		if (scrollWidth > 1160) {
+			$("div.container > nav > div").css("width", ($("header > div").outerWidth() -
+			$("header > div > a.phone").outerWidth() -
+			$("header > div > button.open-form").outerWidth()) - 140 + "px");
 			}
+
 			else {
 				$("div.container > nav > div").css({"width" : 270 + "px"});
 			}
 
-			if (window.matchMedia("(max-width: 1160px)").matches) {
-				$("div.container > nav > div > div").css("top", ($(window).height() - $("div.container > header").outerHeight()) + $(window).scrollTop() - 60 + "px");
+			if (scrollWidth < 1161) {
+				$("div.container > nav > div > div").css("top", ($(window).height() - $("div.container > header").outerHeight()) - 60 + "px");
 				}
+
 				else {
 					$("div.container > nav > div > div").css({"top" : 25 + "px"});
 				}

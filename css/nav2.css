@@ -37,6 +37,11 @@ nav > div > ul > li.selected > a,
 nav > div > ul > li > a:hover { color : rgba(255, 255, 255, 1); }
 
 /* added */
+
+nav > div {
+	min-width: 270px;
+}
+
 nav > div > div {
 	position: absolute;
 	right: 0;
@@ -97,7 +102,6 @@ nav > div > div.search > form > button::before {
 	/* added */
 	nav > div {
 		position: relative;
-		min-width: 270px;
 	}
 	/* end of added */
 
@@ -118,12 +122,15 @@ nav > div > div.search > form > button::before {
 
 	/* added */
 	nav > div > div {
+		padding: 0 25px;
+		border-radius: 25px;
+		border: 2px solid rgba(227, 227, 227, 1);
+		background-color: rgba(255, 255, 255, 1);
 		width: 30px;
-		height: 30px;
-		/* top: 25px; 	 */
-	}
+		height: 46px;
+		}
 
-	nav > div > div::before {
+	/* nav > div > div::before {
 		position: absolute;
 		content: "\2315";
 		color: rgba(255, 255, 255, 1);
@@ -132,7 +139,7 @@ nav > div > div.search > form > button::before {
 		top: -5px;
 		right: 0;
 		font-size: 45px;
-	}
+	} */
 
 	nav > div > div > form {
 		display: none;
@@ -192,7 +199,6 @@ nav > div > div.search > form > button::before {
 
 	nav > div {
 		position : absolute;
-		/* width: 270px;  */
 		top : 0;
 		left : -270px;
 		z-index : 10;
