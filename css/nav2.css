@@ -45,7 +45,7 @@ nav > div {
 nav > div > div {
 	position: absolute;
 	right: 0;
-	cursor: pointer;
+	overflow: hidden;
 }
 
 nav > div > div > form,
@@ -122,12 +122,12 @@ nav > div > div.search > form > button::before {
 
 	/* added */
 	nav > div > div {
-		padding: 0 25px;
+		top: 25px;
 		border-radius: 25px;
 		border: 2px solid rgba(227, 227, 227, 1);
 		background-color: rgba(255, 255, 255, 1);
-		width: 30px;
-		height: 46px;
+		width: 50px;
+		height: 50px;
 		}
 
 	/* nav > div > div::before {
@@ -203,6 +203,7 @@ nav > div > div.search > form > button::before {
 		left : -270px;
 		z-index : 10;
 		height : 100%;
+		max-width: 270px;
 		background-color : rgba(15, 15, 15, 0.9);
 		transition : all 0.25s;
 		}

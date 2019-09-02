@@ -44,31 +44,16 @@ function resize() {
 
 		// added
 
-		var scrollWidth = Math.max(
-			  document.body.scrollWidth, document.documentElement.scrollWidth,
-			  document.body.offsetWidth, document.documentElement.offsetWidth,
-			  document.body.clientWidth, document.documentElement.clientWidth
-		  );
+		if ($(window).width() >= 1161) {
+			$("div.container > nav > div").width($(window).width() - 620);
+		}
 
-
-		if (scrollWidth > 1160) {
-			$("div.container > nav > div").css("width", ($("header > div").outerWidth() -
-			$("header > div > a.phone").outerWidth() -
-			$("header > div > button.open-form").outerWidth()) - 140 + "px");
-			}
-
-			else {
-				$("div.container > nav > div").css({"width" : 270 + "px"});
-			}
-
-			if (scrollWidth < 1161) {
-				$("div.container > nav > div > div").css("top", ($(window).height() - $("div.container > header").outerHeight()) - 60 + "px");
-				}
-
-				else {
-					$("div.container > nav > div > div").css({"top" : 25 + "px"});
-				}
 
 		// end of added
 	getSize();
 	}
+
+	$(document).ready(function() {
+		resize();
+		return false;
+	})
