@@ -89,6 +89,7 @@ nav > div > div.search > form > button::before {
 	height: inherit;
 	text-align: center;
 	content: "O";
+	font: normal 36px/46px sans-serif;
 }
 
 nav > div > div > form > button {
