@@ -98,8 +98,6 @@ nav > div > div > form > button {
 nav > div > div.search > form > button {
 	color: rgba(0, 0, 0, 1);
 	}
-
-
 /* end of added */
 
 @media only screen and (min-width : 1161px) {
@@ -141,14 +139,9 @@ nav > div > div.search > form > button {
 		height: 50px;
 		}
 
-	nav > div > div > form {
-		display: none;
-	}
-
 	nav > div > div.search {
 		width: calc(100% - 20px);
 	}
-
 	/* end of added */
 	}
 
@@ -189,6 +182,7 @@ nav > div > div.search > form > button {
 
 		nav > div > div {
 			width: 100%;
+			height: 40px;
 		}
 
 		nav > div > div > form {
