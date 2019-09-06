@@ -27,6 +27,9 @@ function resize() {
 	if ($("div.container > header > div > ul").hasClass("opened")) {
 		$("div.container > header > div > ul").removeClass("opened");
 		$("div.container > nav").removeClass("opened");
+		if($("nav > div > div").hasClass("search")) {
+			$("nav > div > div").removeClass("search");
+			}
 		}
 	if ($("div.container > div.form:visible").length!=0) {
 		$("div.container > div.form > form").css("top", (($(window).height()-$("div.container > div.form > form").outerHeight())/2)+$(window).scrollTop()+"px");

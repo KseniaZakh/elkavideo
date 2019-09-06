@@ -85,6 +85,7 @@ nav > div > div > form > button {
 	transition: color 0.25s;
 	background-color: rgba(0, 0, 0, 0);
 	cursor: pointer;
+	transition: all 0.25s;
 }
 
 nav > div > div > form > button::before {
@@ -96,6 +97,11 @@ nav > div > div > form > button::before {
 	text-align: center;
 	content: "O";
 	font: normal 36px/46px sans-serif;
+}
+
+nav > div > div > form > button:hover {
+	background-color: rgba(255, 255, 255, 1);
+	color: rgba(215, 6, 6, 1);
 }
 
 nav > div > div.search > form > button {
