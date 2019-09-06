@@ -29,6 +29,7 @@ function resize() {
 		$("div.container > nav").removeClass("opened");
 		if($("nav > div > div").hasClass("search")) {
 			$("nav > div > div").removeClass("search");
+			clear($("nav > div > div > form > input.clear"));
 			}
 		}
 	if ($("div.container > div.form:visible").length!=0) {

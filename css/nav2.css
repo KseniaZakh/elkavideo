@@ -62,15 +62,45 @@ nav > div > div > form {
 	height: 100%;
 }
 
-nav > div > div > form > input,
 nav > div > div.search > form > input {
-	display: none;
-	width: 100%;
+	display: block;
+	position: absolute;
+	top: 0;
+	right: 50px;
+	z-index: 11;
+	width: calc(100% - 75px);
 	height: 100%;
-	padding-left: 20px;
-	border: 1px solid rgba(238, 238, 238, 1);
-	font: normal 18px/40px 'Regular', Arial, Tahoma, Verdana, sans-serif;
-}
+	padding: 0;
+	margin: 0;
+	border: 0;
+	background-color: rgba(255, 255, 255, 0);
+	color: rgba(51, 51, 51, 1);
+	font: normal 18px/46px 'Regular', Arial, Tahoma, Verdana, sans-serif;
+	}
+
+	nav > div > div.search > form > span {
+	display: block;
+	position: absolute;
+	top: calc(50% - 10px);
+	left: 25px;
+	z-index: 10;
+	max-width: 65%;
+	color: rgba(165, 165, 165, 1);
+	white-space : nowrap;
+	font: normal 18px/20px 'Regular', Arial, Tahoma, Verdana, sans-serif;
+	transform: scale(1, 1);
+	transition: all 0.25s;
+	overflow: hidden;
+	}
+
+	nav > div > div.search > form > input:focus + span {
+		transform: scale(0, 0);
+	}
+
+	nav > div > div > form > span,
+	nav > div > div > form > input {
+		display: none;
+	}
 
 nav > div > div > form > button {
 	position: absolute;
