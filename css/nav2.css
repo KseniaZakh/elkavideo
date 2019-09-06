@@ -81,7 +81,7 @@ nav > div > div > form > button {
 	padding: 0;
 	margin: 0;
 	border: none;
-	color: rgba(120, 120, 120, 1);
+	color: rgba(0, 0, 0, 1);
 	transition: color 0.25s;
 	background-color: rgba(0, 0, 0, 0);
 	cursor: pointer;
@@ -100,8 +100,7 @@ nav > div > div > form > button::before {
 }
 
 nav > div > div > form > button:hover {
-	background-color: rgba(255, 255, 255, 1);
-	color: rgba(215, 6, 6, 1);
+	color: rgba(255, 255, 255, 1);
 }
 
 nav > div > div.search > form > button {
