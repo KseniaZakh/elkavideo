@@ -81,11 +81,15 @@ nav > div > div > form > button {
 	padding: 0;
 	margin: 0;
 	border: none;
-	color: rgba(0, 0, 0, 1);
+	color: rgba(120, 120, 120, 1);
 	transition: color 0.25s;
 	background-color: rgba(0, 0, 0, 0);
 	cursor: pointer;
 	transition: all 0.25s;
+}
+
+nav > div > div.search > form > button {
+color: rgba(0, 0, 0, 1);
 }
 
 nav > div > div > form > button::before {
