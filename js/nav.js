@@ -31,10 +31,13 @@ $(document).ready(function() {
 
 	$(document).mouseup(function(e) {
 	if (!$("nav > div > div").is(e.target) && $("nav > div > div").has(e.target).length === 0) {
-		if ($("nav > div > div").hasClass("search")) {
-			$("nav > div > div").removeClass("search");
-			clear($("nav > div > div > form > input.clear"));
+		if ($(window).width() >= 1161) {
+			if ($("nav > div > div").hasClass("search")) {
+				$("nav > div > div").removeClass("search");
+				// clear($("nav > div > div > form > input.clear"));
+				}
 			}
+				clear($("nav > div > div > form > input.clear"));
     	}
     return false;
 	});

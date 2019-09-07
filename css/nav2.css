@@ -44,7 +44,7 @@ nav > div {
 
 nav > div > div {
 	position: absolute;
-	right: 0;
+	/* right: 0; */
 	border: 2px solid rgba(227, 227, 227, 0);
 	background-color: rgba(255, 255, 255, 0);
 	overflow: hidden;
@@ -66,16 +66,16 @@ nav > div > div.search > form > input {
 	display: block;
 	position: absolute;
 	top: 0;
-	right: 50px;
+	/* right: 50px; */
 	z-index: 11;
-	width: calc(100% - 75px);
+	/* width: calc(100% - 75px); */
 	height: 100%;
 	padding: 0;
 	margin: 0;
 	border: 0;
 	background-color: rgba(255, 255, 255, 0);
 	color: rgba(51, 51, 51, 1);
-	font: normal 18px/46px 'Regular', Arial, Tahoma, Verdana, sans-serif;
+	/* font: normal 18px/46px 'Regular', Arial, Tahoma, Verdana, sans-serif; */
 	}
 
 	nav > div > div.search > form > span {
@@ -106,8 +106,8 @@ nav > div > div > form > button {
 	position: absolute;
 	top: 0;
 	right: 0;
-	width: 46px;
-	height: 46px;
+	/* width: 46px;
+	height: 46px; */
 	padding: 0;
 	margin: 0;
 	border: none;
@@ -119,7 +119,7 @@ nav > div > div > form > button {
 }
 
 nav > div > div.search > form > button {
-color: rgba(0, 0, 0, 1);
+	color: rgba(0, 0, 0, 1);
 }
 
 nav > div > div > form > button::before {
@@ -130,7 +130,7 @@ nav > div > div > form > button::before {
 	height: inherit;
 	text-align: center;
 	content: "O";
-	font: normal 36px/46px sans-serif;
+	/* font: normal 36px/46px sans-serif; */
 }
 
 nav > div > div > form > button:hover {
@@ -174,6 +174,7 @@ nav > div > div.search > form > button {
 	/* added */
 	nav > div > div {
 		top: 25px;
+		right: 0;
 		border-radius: 25px;
 		width: 50px;
 		height: 50px;
@@ -182,6 +183,22 @@ nav > div > div.search > form > button {
 	div.container > nav > div > div.search {
 		width: calc(100% - 20px);
 	}
+
+	nav > div > div.search > form > input {
+		right: 50px;
+		width: calc(100% - 75px);
+		font: normal 18px/46px 'Regular', Arial, Tahoma, Verdana, sans-serif;
+	}
+
+	nav > div > div > form > button {
+		width: 46px;
+		height: 46px;
+	}
+
+	nav > div > div > form > button::before {
+		font: normal 36px/46px sans-serif;
+	}
+
 	/* end of added */
 	}
 
@@ -221,43 +238,28 @@ nav > div > div.search > form > button {
 		/* added  */
 
 		nav > div > div {
-			width: 100%;
+			width: 250px;
 			height: 40px;
-		}
-
-		nav > div > div > form {
-			display: block;
-			height: 40px;
-			padding-right: 20px;
-		}
-
-		nav > div > div > form > input {
+			top: calc(100vh - 130px);
+			right: 10px;
 			border-radius: 20px;
-			}
-
-		nav > div > div > form > input::-webkit-input-placeholder {
-			font: normal 18px/40px 'Regular', Arial, Tahoma, Verdana, sans-serif;
-			}
-
-		nav > div > div > form > input::-moz-placeholder {
-			font: normal 18px/40px 'Regular', Arial, Tahoma, Verdana, sans-serif;
 		}
 
-		nav > div > div > form > input::-ms-input-placeholder {
-			font: normal 18px/40px 'Regular', Arial, Tahoma, Verdana, sans-serif;
+		nav > div > div.search > form > input {
+			right: 40px;
+			width: 180px;
+			font: normal 18px/36px 'Regular', Arial, Tahoma, Verdana, sans-serif;
 		}
 
 		nav > div > div > form > button {
-			right: 20px;
-			border-top-right-radius: 20px;
-			border-bottom-right-radius: 20px;
-			}
+			width: 36px;
+			height: 36px;
+		}
 
-			nav > div > div > form > button::before {
-				height: 40px;
-				top: -10px;
-				font-size: 40px;
-			}
+		nav > div > div > form > button::before {
+			font: normal 30px/36px sans-serif;
+		}
+
 		/* end of added */
 
 	}
