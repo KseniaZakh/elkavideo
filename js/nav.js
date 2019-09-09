@@ -22,8 +22,24 @@ $(document).ready(function() {
 			}
 			else {
 				$("nav > div > div > form").submit();
+				if ($("nav > div > ul > li > a").hasClass("search_open")){
+					$("nav > div > ul > li > a").removeClass("search_open");
+				}
 			}
-		});
+
+		if ($("nav > div > div").hasClass("search")) {
+			if (!$("nav > div > ul > li > a").hasClass("search_open")) {
+				$("nav > div > ul > li > a").addClass("search_open");
+				}
+			}
+		else {
+			if (!$("nav > div > ul > li > a").hasClass("search_open")) {
+				$("nav > div > ul > li > a").removeClass("search_open");
+			}
+		}
+
+			});
+
 
 	return false;
 	});

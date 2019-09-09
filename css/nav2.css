@@ -44,7 +44,6 @@ nav > div {
 
 nav > div > div {
 	position: absolute;
-	/* right: 0; */
 	border: 2px solid rgba(227, 227, 227, 0);
 	background-color: rgba(255, 255, 255, 0);
 	overflow: hidden;
@@ -66,16 +65,13 @@ nav > div > div.search > form > input {
 	display: block;
 	position: absolute;
 	top: 0;
-	/* right: 50px; */
 	z-index: 11;
-	/* width: calc(100% - 75px); */
 	height: 100%;
 	padding: 0;
 	margin: 0;
 	border: 0;
 	background-color: rgba(255, 255, 255, 0);
 	color: rgba(51, 51, 51, 1);
-	/* font: normal 18px/46px 'Regular', Arial, Tahoma, Verdana, sans-serif; */
 	}
 
 	nav > div > div.search > form > span {
@@ -106,8 +102,6 @@ nav > div > div > form > button {
 	position: absolute;
 	top: 0;
 	right: 0;
-	/* width: 46px;
-	height: 46px; */
 	padding: 0;
 	margin: 0;
 	border: none;
@@ -130,7 +124,6 @@ nav > div > div > form > button::before {
 	height: inherit;
 	text-align: center;
 	content: "O";
-	/* font: normal 36px/46px sans-serif; */
 }
 
 nav > div > div > form > button:hover {
@@ -172,6 +165,9 @@ nav > div > div.search > form > button {
 	nav > div > ul > li > a:hover::before { height : 5px; }
 
 	/* added */
+
+	nav > div > ul > li > a.search_open::before { display: none; }
+
 	nav > div > div {
 		top: 25px;
 		right: 0;
@@ -238,16 +234,15 @@ nav > div > div.search > form > button {
 		/* added  */
 
 		nav > div > div {
-			width: 250px;
+			width: 230px;
 			height: 40px;
-			top: calc(100vh - 130px);
-			right: 10px;
+			right: 20px;
 			border-radius: 20px;
 		}
 
 		nav > div > div.search > form > input {
-			right: 40px;
-			width: 180px;
+			right: 30px;
+			width: 170px;
 			font: normal 18px/36px 'Regular', Arial, Tahoma, Verdana, sans-serif;
 		}
 
@@ -273,6 +268,10 @@ nav > div > div.search > form > button {
 	nav > div > ul > li > a {
 		padding : 0 40px;
 		}
+
+		nav > div > div {
+			top: calc(100vh - 140px);
+		}
 	}
 
 @media only screen and (max-width : 560px) {
@@ -283,5 +282,9 @@ nav > div > div.search > form > button {
 
 	nav > div > ul > li > a {
 		padding : 0 20px;
+		}
+
+		nav > div > div {
+			top: calc(100vh - 120px);
 		}
 	}
