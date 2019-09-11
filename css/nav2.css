@@ -209,7 +209,7 @@ nav > div > div.search > form > button {
 	nav > div {
 		position : absolute;
 		top : 0;
-		left : -270px;
+		/* left : -270px; */
 		z-index : 10;
 		height : 100%;
 		max-width: 270px;
@@ -234,9 +234,9 @@ nav > div > div.search > form > button {
 		/* added  */
 
 		nav > div > div {
-			width: 230px;
+			/* width: 230px; */
 			height: 40px;
-			right: 20px;
+			/* right: 20px; */
 			border-radius: 20px;
 		}
 
@@ -265,11 +265,18 @@ nav > div > div.search > form > button {
 		top : 80px;
 		}
 
+		nav > div {
+			max-width: 360px;
+			left : -360px;
+		}
+
 	nav > div > ul > li > a {
 		padding : 0 40px;
 		}
 
 		nav > div > div {
+			width: 280px;
+			left: 40px;
 			top: calc(100vh - 140px);
 		}
 	}
@@ -280,11 +287,18 @@ nav > div > div.search > form > button {
 		top : 60px;
 		}
 
+		nav > div {
+			max-width: 270px;
+			left : -270px;
+		}
+
 	nav > div > ul > li > a {
 		padding : 0 20px;
 		}
 
 		nav > div > div {
+			width: 230px;
+			left: 20px;
 			top: calc(100vh - 120px);
 		}
 	}
