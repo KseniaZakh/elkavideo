@@ -27,11 +27,14 @@ function resize() {
 	if ($("div.container > header > div > ul").hasClass("opened")) {
 		$("div.container > header > div > ul").removeClass("opened");
 		$("div.container > nav").removeClass("opened");
-		if($("nav > div > div").hasClass("search")) {
+			}
+
+	if($("nav > div > div").hasClass("search")) {
 			$("nav > div > div").removeClass("search");
+			$("nav > div > ul").css({"visibility" : "visible"});
 			clear($("nav > div > div > form > input.clear"));
 			}
-		}
+
 	if ($("div.container > div.form:visible").length!=0) {
 		$("div.container > div.form > form").css("top", (($(window).height()-$("div.container > div.form > form").outerHeight())/2)+$(window).scrollTop()+"px");
 		$("div.container > div.form > form").css("left", (($(window).width()-$("div.container > div.form > form").outerWidth())/2)+$(window).scrollLeft()+"px");
@@ -46,14 +49,10 @@ function resize() {
 		$("div.container > div.video > div").css("left", (($(window).width()-$("div.container > div.video > div").outerWidth())/2)+$(window).scrollLeft()+"px");
 		}
 
-		// added
-
 		if ($(window).width() >= 1161) {
 			$("div.container > nav > div").width($(window).width() - 620);
 		}
 
-
-		// end of added
 	getSize();
 	}
 

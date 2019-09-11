@@ -10,13 +10,11 @@ nav > div > ul {
 	margin : 0;
 	list-style : none;
 	display : flex;
-	/* flex-wrap : wrap; */ /* changed  */
 	}
 
 nav > div > ul > li > a {
 	display : block;
 	position : relative;
-	/* color : rgba(100, 90, 90, 1); */
 	color : rgba(120, 120, 120, 1);
 	transition : all 0.25s;
 	text-decoration : none;
@@ -35,8 +33,6 @@ nav > div > ul > li > a::before {
 
 nav > div > ul > li.selected > a,
 nav > div > ul > li > a:hover { color : rgba(255, 255, 255, 1); }
-
-/* added */
 
 nav > div {
 	min-width: 270px;
@@ -133,7 +129,6 @@ nav > div > div > form > button:hover {
 nav > div > div.search > form > button {
 	color: rgba(0, 0, 0, 1);
 	}
-/* end of added */
 
 @media only screen and (min-width : 1161px) {
 
@@ -143,14 +138,12 @@ nav > div > div.search > form > button {
 		top : 0;
 		}
 
-	/* added */
 	nav > div {
 		position: relative;
 	}
-	/* end of added */
 
 	nav > div > ul { padding : 0 20px; }
-	nav > div > ul > li { margin : 0 10px; } /* changed */
+	nav > div > ul > li { margin : 0 10px; }
 
 	nav > div > ul > li > a {
 		padding : 0 10px;
@@ -163,10 +156,6 @@ nav > div > div.search > form > button {
 		}
 
 	nav > div > ul > li > a:hover::before { height : 5px; }
-
-	/* added */
-
-	nav > div > ul > li > a.search_open::before { display: none; }
 
 	nav > div > div {
 		top: 25px;
@@ -193,9 +182,7 @@ nav > div > div.search > form > button {
 
 	nav > div > div > form > button::before {
 		font: normal 36px/46px sans-serif;
-	}
-
-	/* end of added */
+		}
 	}
 
 @media only screen and (max-width : 1160px) {
@@ -209,10 +196,8 @@ nav > div > div.search > form > button {
 	nav > div {
 		position : absolute;
 		top : 0;
-		/* left : -270px; */
 		z-index : 10;
 		height : 100%;
-		max-width: 270px;
 		background-color : rgba(15, 15, 15, 0.9);
 		transition : all 0.25s;
 		}
@@ -220,7 +205,7 @@ nav > div > div.search > form > button {
 	nav.opened > div { left : 0; }
 	nav > div > ul {
 		padding : 20px 0;
-		flex-wrap : wrap; /* added  */
+		flex-wrap : wrap;
 	}
 	nav > div > ul > li { width : 100%; }
 	nav > div > ul > li > a { font : normal 18px/40px 'Regular', Arial, Tahoma, Verdana, sans-serif; }
@@ -231,12 +216,8 @@ nav > div > div.search > form > button {
 		height : 100%;
 		}
 
-		/* added  */
-
 		nav > div > div {
-			/* width: 230px; */
 			height: 40px;
-			/* right: 20px; */
 			border-radius: 20px;
 		}
 
@@ -254,9 +235,6 @@ nav > div > div.search > form > button {
 		nav > div > div > form > button::before {
 			font: normal 30px/36px sans-serif;
 		}
-
-		/* end of added */
-
 	}
 
 @media only screen and (min-width : 561px) and (max-width : 1160px) {
@@ -277,7 +255,7 @@ nav > div > div.search > form > button {
 		nav > div > div {
 			width: 280px;
 			left: 40px;
-			top: calc(100vh - 140px);
+			top: calc(100vh - 160px);
 		}
 	}
 
