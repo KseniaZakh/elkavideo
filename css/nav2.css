@@ -44,44 +44,79 @@ nav > div {
 
 nav > div > div {
 	position: absolute;
-	right: 0;
+	border: 2px solid rgba(227, 227, 227, 0);
+	background-color: rgba(255, 255, 255, 0);
 	overflow: hidden;
 	transition: width 0.25s;
 }
 
-nav > div > div > form,
-nav > div > div.search > form {
+nav > div > div.search {
+	border: 2px solid rgba(227, 227, 227, 1);
+	background-color: rgba(255, 255, 255, 1);
+}
+
+nav > div > div > form {
 	position: relative;
 	width: 100%;
 	height: 100%;
 }
 
-nav > div > div > form > input,
 nav > div > div.search > form > input {
-	display: none;
-	width: 100%;
+	display: block;
+	position: absolute;
+	top: 0;
+	z-index: 11;
 	height: 100%;
-	padding-left: 20px;
-	border: 1px solid rgba(238, 238, 238, 1);
-	font: normal 18px/40px 'Regular', Arial, Tahoma, Verdana, sans-serif;
-}
+	padding: 0;
+	margin: 0;
+	border: 0;
+	background-color: rgba(255, 255, 255, 0);
+	color: rgba(51, 51, 51, 1);
+	}
 
-nav > div > div > form > button,
-nav > div > div.search > form > button {
+	nav > div > div.search > form > span {
+	display: block;
+	position: absolute;
+	top: calc(50% - 10px);
+	left: 25px;
+	z-index: 10;
+	max-width: 65%;
+	color: rgba(165, 165, 165, 1);
+	white-space : nowrap;
+	font: normal 18px/20px 'Regular', Arial, Tahoma, Verdana, sans-serif;
+	transform: scale(1, 1);
+	transition: all 0.25s;
+	overflow: hidden;
+	}
+
+	nav > div > div.search > form > input:focus + span {
+		transform: scale(0, 0);
+	}
+
+	nav > div > div > form > span,
+	nav > div > div > form > input {
+		display: none;
+	}
+
+nav > div > div > form > button {
 	position: absolute;
 	top: 0;
 	right: 0;
-	width: 46px;
-	height: 46px;
 	padding: 0;
 	margin: 0;
 	border: none;
+	color: rgba(120, 120, 120, 1);
+	transition: color 0.25s;
 	background-color: rgba(0, 0, 0, 0);
 	cursor: pointer;
+	transition: all 0.25s;
 }
 
-nav > div > div > form > button::before,
-nav > div > div.search > form > button::before {
+nav > div > div.search > form > button {
+	color: rgba(0, 0, 0, 1);
+}
+
+nav > div > div > form > button::before {
 	position: inherit;
 	top: inherit;
 	right: inherit;
@@ -89,11 +124,10 @@ nav > div > div.search > form > button::before {
 	height: inherit;
 	text-align: center;
 	content: "O";
-	font: normal 36px/46px sans-serif;
 }
 
-nav > div > div > form > button {
-	color: rgba(227, 227, 227, 1);
+nav > div > div > form > button:hover {
+	color: rgba(255, 255, 255, 1);
 }
 
 nav > div > div.search > form > button {
@@ -131,18 +165,36 @@ nav > div > div.search > form > button {
 	nav > div > ul > li > a:hover::before { height : 5px; }
 
 	/* added */
+
+	nav > div > ul > li > a.search_open::before { display: none; }
+
 	nav > div > div {
 		top: 25px;
+		right: 0;
 		border-radius: 25px;
-		border: 2px solid rgba(227, 227, 227, 1);
-		background-color: rgba(255, 255, 255, 1);
 		width: 50px;
 		height: 50px;
 		}
 
-	nav > div > div.search {
+	div.container > nav > div > div.search {
 		width: calc(100% - 20px);
 	}
+
+	nav > div > div.search > form > input {
+		right: 50px;
+		width: calc(100% - 75px);
+		font: normal 18px/46px 'Regular', Arial, Tahoma, Verdana, sans-serif;
+	}
+
+	nav > div > div > form > button {
+		width: 46px;
+		height: 46px;
+	}
+
+	nav > div > div > form > button::before {
+		font: normal 36px/46px sans-serif;
+	}
+
 	/* end of added */
 	}
 
@@ -182,43 +234,27 @@ nav > div > div.search > form > button {
 		/* added  */
 
 		nav > div > div {
-			width: 100%;
+			width: 230px;
 			height: 40px;
-		}
-
-		nav > div > div > form {
-			display: block;
-			height: 40px;
-			padding-right: 20px;
-		}
-
-		nav > div > div > form > input {
+			right: 20px;
 			border-radius: 20px;
-			}
-
-		nav > div > div > form > input::-webkit-input-placeholder {
-			font: normal 18px/40px 'Regular', Arial, Tahoma, Verdana, sans-serif;
-			}
-
-		nav > div > div > form > input::-moz-placeholder {
-			font: normal 18px/40px 'Regular', Arial, Tahoma, Verdana, sans-serif;
 		}
 
-		nav > div > div > form > input::-ms-input-placeholder {
-			font: normal 18px/40px 'Regular', Arial, Tahoma, Verdana, sans-serif;
+		nav > div > div.search > form > input {
+			right: 30px;
+			width: 170px;
+			font: normal 18px/36px 'Regular', Arial, Tahoma, Verdana, sans-serif;
 		}
 
 		nav > div > div > form > button {
-			right: 20px;
-			border-top-right-radius: 20px;
-			border-bottom-right-radius: 20px;
-			}
+			width: 36px;
+			height: 36px;
+		}
 
-			nav > div > div > form > button::before {
-				height: 40px;
-				top: -10px;
-				font-size: 40px;
-			}
+		nav > div > div > form > button::before {
+			font: normal 30px/36px sans-serif;
+		}
+
 		/* end of added */
 
 	}
@@ -232,6 +268,10 @@ nav > div > div.search > form > button {
 	nav > div > ul > li > a {
 		padding : 0 40px;
 		}
+
+		nav > div > div {
+			top: calc(100vh - 140px);
+		}
 	}
 
 @media only screen and (max-width : 560px) {
@@ -242,5 +282,9 @@ nav > div > div.search > form > button {
 
 	nav > div > ul > li > a {
 		padding : 0 20px;
+		}
+
+		nav > div > div {
+			top: calc(100vh - 120px);
 		}
 	}

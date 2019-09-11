@@ -7,6 +7,9 @@ $(document).ready(function() {
 		else {
 			$(this).addClass("opened");
 			$("div.container > nav").addClass("opened");
+			if (!$("nav > div > div").hasClass("search")) {
+				$("nav > div > div").addClass("search");
+			}
 			}
 		});
 
@@ -17,17 +20,40 @@ $(document).ready(function() {
 		if (!$("nav > div > div").hasClass("search")) {
 			$("nav > div > div").addClass("search");
 			}
-		});
-		// end of added
+			else {
+				$("nav > div > div > form").submit();
+				if ($("nav > div > ul > li > a").hasClass("search_open")){
+					$("nav > div > ul > li > a").removeClass("search_open");
+				}
+			}
+
+		if ($("nav > div > div").hasClass("search")) {
+			if (!$("nav > div > ul > li > a").hasClass("search_open")) {
+				$("nav > div > ul > li > a").addClass("search_open");
+				}
+			}
+		else {
+			if (!$("nav > div > ul > li > a").hasClass("search_open")) {
+				$("nav > div > ul > li > a").removeClass("search_open");
+			}
+		}
+
+			});
+
+
 	return false;
 	});
 
-	// added
+
 	$(document).mouseup(function(e) {
 	if (!$("nav > div > div").is(e.target) && $("nav > div > div").has(e.target).length === 0) {
-		if ($("nav > div > div").hasClass("search")) {
-			$("nav > div > div").removeClass("search");
+		if ($(window).width() >= 1161) {
+			if ($("nav > div > div").hasClass("search")) {
+				$("nav > div > div").removeClass("search");
+				// clear($("nav > div > div > form > input.clear"));
+				}
 			}
+				clear($("nav > div > div > form > input.clear"));
     	}
     return false;
 	});
