@@ -256,7 +256,7 @@ nav > div > div.search > form > button {
 			width: 280px;
 			left: 40px;
 			top: calc(100vh - 160px);
-			top: calc(var(-vh, 1vh) * 100 - 160);
+			top: calc(var(--vh, 1vh) * 100 - 160);
 		}
 	}
 
@@ -279,6 +279,6 @@ nav > div > div.search > form > button {
 			width: 230px;
 			left: 20px;
 			top: calc(100vh - 120px);
-			top: calc(var(-vh, 1vh) * 100 - 120);
+			top: calc(var(--vh, 1vh) * 100 - 120);
 		}
 	}
