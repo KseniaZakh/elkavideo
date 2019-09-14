@@ -254,7 +254,7 @@ nav > div > div.search > form > button {
 		nav > div > div {
 			width: 280px;
 			left: 40px;
-			top: calc(100vh - 160px);
+			top: calc(100vh - 140px);
 			top: calc(var(--vh, 1vh) - 140px);
 		}
 
