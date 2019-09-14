@@ -223,7 +223,6 @@ nav > div > div.search > form > button {
 
 		nav > div > div.search > form > input {
 			right: 30px;
-			width: 170px;
 			font: normal 18px/36px 'Regular', Arial, Tahoma, Verdana, sans-serif;
 		}
 
@@ -258,6 +257,10 @@ nav > div > div.search > form > button {
 			top: calc(100vh - 160px);
 			top: calc(var(--vh, 1vh) - 140px);
 		}
+
+		nav > div > div.search > form > input {
+			width: 22px;
+		}
 	}
 
 @media only screen and (max-width : 560px) {
@@ -280,5 +283,9 @@ nav > div > div.search > form > button {
 			left: 20px;
 			top: calc(100vh - 120px);
 			top: calc(var(--vh, 1vh) - 120px);
+		}
+
+		nav > div > div.search > form > input {
+			width: 170px;
 		}
 	}
