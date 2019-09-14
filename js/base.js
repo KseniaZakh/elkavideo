@@ -53,6 +53,9 @@ function resize() {
 			$("div.container > nav > div").width($(window).width() - 620);
 		}
 
+		let vh = window.innerHeight;
+		document.documentElement.style.setProperty("--vh", `${vh}px`);
+
 	getSize();
 	}
 
